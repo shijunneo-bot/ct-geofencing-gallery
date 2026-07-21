@@ -1,0 +1,49 @@
+# CleverTap Geofencing Gallery — Field Guide 08
+
+> An interactive reference of 120 location-based geofencing campaign examples for CleverTap, spanning 15 industries. Each example pairs a real-world scenario with the channel it runs on, a device mockup of the customer-facing message, the SDK event payload, and a copy-paste setup sheet. Built by SJ Neo as part of the CleverTap Field Guide series.
+
+## What this is
+
+This is a single-page gallery and developer guide for marketers and engineers using CleverTap's geofencing capability. It answers "what location-triggered campaign should I run, on which channel, and how do I set it up?"
+
+Geofencing raises Geofence Cluster Entered and Exited events automatically from the mobile SDK when a device crosses a virtual boundary around a real location. Campaigns respond in real time or as scheduled follow-ups.
+
+## Key facts about CleverTap geofencing
+
+- A cluster holds up to 100 geofences; an app can have up to 100 clusters.
+- Fences are circles or polygons. Practical positioning accuracy is 20 to 50 metres, so fences should be sized at 100 metres or more.
+- Events are raised only by the SDK (Geofence Cluster Entered / Exited). The app requests location permission; the SDK never asks for it.
+- Each cluster carries its own tracking schedule and Do Not Disturb hours.
+- The event payload includes: id, gcId, gcName, lat, lng, r (radius), triggered_lat, triggered_lng.
+- There is no native dwell event. Dwell is built as a Journey: Entered starts a timer, Exited cancels it, surviving the wait counts as dwell.
+- Geofencing is an Advanced Plan capability.
+- A geofence campaign can respond on any channel: push, in-app, SMS, WhatsApp, email, or webhook.
+
+## Coverage
+
+120 examples across 15 verticals: e-commerce, fintech, food and beverage, travel, media and entertainment, telco, insurance, mobility and ride-hailing, gaming and esports, health and fitness, education, property and proptech, logistics, betting and gaming, and jobs and recruitment.
+
+Four trigger mechanics: entry, exit, dwell, and follow-up.
+Six delivery channels: push, in-app, SMS, WhatsApp, email, webhook.
+
+## Sections
+
+- Use-Case Gallery: 120 filterable examples, each opening to device mockups, event payload, cluster and campaign config, and a setup sheet.
+- Developer Setup Docs: SDK integration for Android and iOS, permission-flow design, cluster creation, campaign qualification, and payload reference.
+
+## Related CleverTap Field Guides
+
+- AMP Email Templates: https://shijunneo-bot.github.io/amp-email-gallery/
+- Rich Push Examples: https://shijunneo-bot.github.io/rich-push-gallery/
+- SMS Examples: https://shijunneo-bot.github.io/ct-sms-field-guide/
+- WhatsApp Examples: https://shijunneo-bot.github.io/whatsapp-addon-gallery/
+- Linked Content: https://shijunneo-bot.github.io/ct-linked-content-gallery/
+- Recommendations and Catalogs: https://shijunneo-bot.github.io/ct-recommendations-gallery/
+- Reminders: https://shijunneo-bot.github.io/ct-reminders-gallery/
+- Promos: https://shijunneo-bot.github.io/ct-promos-gallery/
+- Custom HTML In-App: https://shijunneo-bot.github.io/ct-template-gallery/
+- Geofencing (this guide): https://shijunneo-bot.github.io/ct-geofencing-gallery/
+
+## Notes
+
+Mechanics are verified against docs.clevertap.com and developer.clevertap.com. Sample coordinates, brand names, and figures in the mockups are illustrative, not real campaign data.
